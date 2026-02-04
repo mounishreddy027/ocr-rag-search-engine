@@ -60,21 +60,3 @@ POST /ingest/: Upload document images (single or batch).
 
 POST /search/: Ask natural language questions about your uploaded documents.
 ---
-## Validated Scenarios
-This system has been validated against the FUNSD Dataset (Form Understanding in Noisy Scanned Documents):
-
-Scenario,Result
-Complex Tables,"Accurately retrieves row-specific data (e.g., specific line items in an invoice)."
-Handwriting,Handles mixed printed/handwritten forms effectively.
-Noise Resilience,"Robust against scan artifacts, fax headers, and poor contrast."
----
-## Project Structure
-
-ocr_rag_search_engine/
-├── src/
-│   ├── ocr_engine.py       # Tesseract Wrapper
-│   ├── text_processor.py   # Recursive Chunking Logic
-│   ├── search_engine.py    # Hybrid Search (FAISS + BM25) & Reranking
-├── app.py                  # FastAPI Application Entrypoint
-├── Dockerfile              # Production Image Config
-└── requirements.txt        # Dependencies
