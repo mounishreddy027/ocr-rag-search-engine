@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+pytesseract
+sentence-transformers
+faiss-cpu
+pillow
+numpy
+rank_bm25
+langchain-text-splitters
+torch
